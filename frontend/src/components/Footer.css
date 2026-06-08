@@ -1,0 +1,106 @@
+.footer{
+    background-color: rgb(0, 60, 138);
+    padding: 70px 0 76px 0;
+}
+
+.container.footer{
+    padding:0 30px 47px 30px;
+    display:flex;
+    gap: 80px;
+}
+
+.logo.footer{
+    padding:0;
+    margin-bottom:30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.16667;
+    letter-spacing: 0.03em; 
+    display: block;
+}
+
+.span-logo-footer{
+    color: #666666;
+}
+
+.logo-footer-text{
+    font-size: 18px;
+    line-height: 1.4;
+    width:280px;
+}
+
+h4{
+    margin-bottom: 39px;
+    font-size: 18px;
+}
+
+.footer-nav-link{
+    padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-nav-link:focus,
+.footer-nav-link:hover{
+    color: #159EEC;
+}
+
+.address-text-footer,
+.footer-nav-link{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    font-style: normal;
+}
+
+.address-text-footer:not(:last-child), 
+.links-footer li:not(:last-child){
+    margin-bottom:10px;
+}
+
+.address-link-footer{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-link-footer:focus,
+.address-link-footer:hover{
+    color:#159EEC;
+}
+
+.div-lang-footer{
+    margin-left:200px;
+}
+
+.language.footer{
+    margin-left: 0;
+    padding: 0;
+}
+
+.language.footer:hover{
+  color: #186b1c;
+}
+
+.text-slash-footer{
+    color: white;
+}
+
+.icon-social{
+    fill: white;
+}
+
+.div-policy{
+    max-width: 1660px;
+    width:100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top:46px;
+    border-top: 1px solid #BFD2F8;
+}
+
+.div-policy-list{
+    display: flex;
+    gap: 20px;
+}
+

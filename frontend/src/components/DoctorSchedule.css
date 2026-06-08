@@ -1,0 +1,480 @@
+.ds-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px 32px;
+    box-shadow: 0 4px 24px rgba(31, 43, 108, 0.08);
+    margin-top: 24px;
+}
+
+.ds-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1F2B6C;
+    margin: 0 0 20px;
+}
+
+/* Ціна */
+.ds-price-block {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.ds-price-label {
+    font-size: 13px;
+    color: #6B7280;
+    margin: 0 0 10px;
+}
+
+.ds-price-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.ds-price-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.ds-price-dot.green { background: #22c55e; }
+
+.ds-price-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2B6C;
+}
+
+.ds-price-tag {
+    display: inline-block;
+    font-size: 12px;
+    color: #6B7280;
+    background: #F3F4F6;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* Таблиця */
+.ds-table-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.ds-arrow {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #344054;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ds-arrow:hover:not(:disabled) {
+    border-color: #159EEC;
+    color: #159EEC;
+}
+
+.ds-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.ds-table {
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Заголовки */
+.ds-header-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.ds-col-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.ds-col-header.ds-col-today {
+    border-bottom-color: #159EEC;
+}
+
+.ds-col-dayname {
+    font-size: 13px;
+    color: #9CA3AF;
+    font-weight: 500;
+}
+
+.ds-col-date {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1F2B6C;
+    margin-top: 2px;
+}
+
+/* Рядки */
+.ds-time-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.ds-cell {
+    text-align: center;
+    padding: 8px 4px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.ds-cell--empty {
+    color: #D1D5DB;
+    background: transparent;
+    border: none;
+}
+
+.ds-cell--taken {
+    color: #D1D5DB;
+    text-decoration: line-through;
+}
+
+.ds-cell--slot {
+    background: #159EEC;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.ds-cell--slot:hover {
+    background: #1181c2;
+    transform: scale(1.05);
+}
+
+.ds-cell--selected {
+    background: #186b1c !important;
+    transform: scale(1.05);
+}
+
+/* Кнопка показати більше */
+.ds-toggle-btn {
+    display: block;
+    margin: 16px auto 0;
+    background: none;
+    border: none;
+    color: #159EEC;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+.ds-toggle-btn:hover { text-decoration: underline; }
+
+/* Підтвердження */
+.ds-confirm {
+    margin-top: 20px;
+    padding: 14px 20px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.ds-confirm-text { flex: 1; font-size: 15px; color: #166534; margin: 0; }
+
+.ds-confirm-btn {
+    padding: 9px 22px;
+    background: #186b1c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ds-confirm-btn:hover { background: #159EEC; }
+
+.ds-cancel-btn {
+    padding: 9px 16px;
+    background: transparent;
+    border: 1px solid #9CA3AF;
+    color: #6B7280;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ds-cancel-btn:hover { border-color: #ff4d4f; color: #ff4d4f; }
+
+.ds-loading, .ds-empty {
+    text-align: center;
+    color: #6B7280;
+    padding: 40px 0;
+    font-size: 15px;
+}
+
+.ds-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.ds-modal-content {
+    background: #fff;
+    width: 100%;
+    max-width: 450px;
+    padding: 32px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.ds-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #9CA3AF;
+    cursor: pointer;
+}
+
+.ds-modal-title {
+    font-size: 24px;
+    color: #159EEC;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+
+.ds-modal-subtitle {
+    font-size: 14px;
+    color: #6B7280;
+    margin-bottom: 24px;
+}
+
+.ds-appointment-info {
+    background: #F9FAFB;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.ds-appointment-info p { margin: 4px 0; color: #4B5563; }
+.ds-appointment-info strong { color: #1F2B6C; }
+
+.ds-input-group { margin-bottom: 16px; }
+.ds-input-group label { display: block; font-size: 14px; color: #4B5563; margin-bottom: 6px; font-weight: 500; }
+
+.ds-input-group select,
+.ds-input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.ds-input-group select option {
+    max-width:280px;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #1F2B6C;
+    font-size: 16px;
+}
+
+.ds-info-box {
+    display: flex;
+    gap: 12px;
+    background: #EBF8FF;
+    padding: 12px;
+    border: 1px solid #BEE3F8;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.ds-info-box p { font-size: 12px; color: #2C5282; margin: 0; }
+
+.ds-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #60A5FA;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ds-submit-btn:hover:not(:disabled) { background: #3B82F6; }
+.ds-submit-btn:disabled { background: #D1D5DB; cursor: not-allowed; }
+
+.ds-otp-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 30px 0 10px 0;
+}
+
+.ds-otp-text {
+    font-size: 14px;
+    color: #475467;
+    text-align: center;
+}
+
+.ds-otp-inputs {
+    display: flex;
+    gap: 12px;
+}
+
+.ds-otp-input {
+    width: 52px;
+    height: 56px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    border: 2px solid #D0D5DD;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.ds-otp-input:focus {
+    border-color: #159EEC;
+}
+
+.ds-otp-error {
+    color: #ff4d4f;
+    font-size: 13px;
+    margin: 0;
+}
+
+.ds-input-error {
+    border-color: #ff4d4f !important;
+    box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.1);
+}
+
+.ds-field-error {
+    display: block;
+    color: #ff4d4f;
+    font-size: 12px;
+    margin-top: 4px;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Оранжевий колір для pending */
+.ds-cell.pending {
+    background-color: #FF8C00; /* DarkOrange */
+    width: 100%;
+}
+
+.ds-cell.taken {
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Плавна поява з невеликим зсувом */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(var(--slide-translate));
+    filter: blur(2px); /* Додаємо легке розмиття для м'якості */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+.ds-slide-left {
+  --slide-translate: 20px;
+  animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.ds-slide-right {
+  --slide-translate: -20px;
+  animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Прибираємо ривки при зміні контенту */
+.ds-table {
+  will-change: transform, opacity;
+  transition: opacity 0.2s ease;
+}
+
+/* Оновлена анімація для слотів, що звільнилися (більш стримана) */
+@keyframes freedSlot {
+  0% { background-color: #fb923c; transform: scale(0.95); }
+  50% { background-color: #93c5fd; transform: scale(1.02); }
+  100% { background-color: #3b82f6; transform: scale(1); }
+}
+
+.ds-cell--freed {
+  animation: freedSlot 1.5s ease-out;
+}
+
+.ds-cell {
+  will-change: transform, background-color;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.ds-slide-left {
+  animation: slideInLeft 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ds-slide-right {
+  animation: slideInRight 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
